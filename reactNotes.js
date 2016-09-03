@@ -163,3 +163,7 @@ A Component manages its own state internally, but—besides setting an initial s
 * We didn't say props are also serializable because it's pretty common to pass down callback functions through props.
 
 */
+
+
+// Pure functions
+// no side effects
