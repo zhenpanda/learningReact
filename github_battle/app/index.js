@@ -29,6 +29,23 @@ ReactDOM.render(
     Testable
 */
 
+/*
+// link Component
+var Link = React.createClass({
+  // link with click event
+  changeURL: function() {
+    window.location.replace(this.props.href)
+  },
+  render: function () {
+    return (
+      <span style={{color: 'blue', cursor:'pointer'}}
+      onClick={this.changeURL}>
+        {this.props.children}
+      </span>
+    )
+  }
+})
+
 var USER_DATA = {
   name: 'Tyler McGinnis',
   username: 'tylermcginnis',
@@ -42,12 +59,13 @@ var ProfilePic = React.createClass({
 });
 
 var ProfileLink = React.createClass({
+  // using the link Component
   render: function () {
     return (
       <div>
-        <a href={'https://www.github.com/' +  this.props.username}>
+        <Link href={'https://www.github.com/' +  this.props.username}>
           {this.props.username}
-        </a>
+        </Link>
       </div>
     );
   }
@@ -60,10 +78,10 @@ var ProfileName = React.createClass({
 });
 
 var Avatar = React.createClass({
+  // calling other react Components
   render: function () {
     return(
       <div>
-      // calling other react Components
         <ProfilePic imageUrl={this.props.user.image}/>
         <ProfileName name={this.props.user.name}/>
         <ProfileLink username={this.props.user.username}/>
@@ -71,6 +89,12 @@ var Avatar = React.createClass({
     );
   }
 });
-
-
 ReactDOM.render(<Avatar user={USER_DATA} />, document.getElementById('app'));
+*/
+
+var routes = require('./config/routes');
+
+ReactDOM.render(
+  routes,
+  document.getElementById('app')
+);
